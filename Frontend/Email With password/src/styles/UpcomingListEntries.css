@@ -1,0 +1,64 @@
+.UpcomingListEntries-page{
+    position:relative;
+    z-index:2;
+}
+
+.List-breadcrumb{
+
+    color:var(--text-light);
+
+    font-size:0.8rem;
+}
+
+.List-title{
+
+    color:var(--text);
+
+    font-size:2rem;
+
+    font-weight:700;
+}
+
+/* ==========================================
+   TABLE INPUT
+========================================== */
+
+.recipient-input{
+    width:100%;
+    min-width:150px;
+
+    padding:8px 12px;
+
+    border:1px solid var(--border);
+    border-radius:8px;
+
+    background:var(--surface);
+    color:var(--text);
+
+    font-size:.88rem;
+
+    transition:.2s;
+}
+
+.recipient-input:focus{
+    outline:none;
+    border-color:#3b82f6;
+    box-shadow:0 0 0 3px rgba(59,130,246,.15);
+}
+
+.dark .recipient-input{
+    background:#111827;
+    color:#f3f4f6;
+    border-color:#374151;
+}
+
+/* Prevent wrapping */
+.recipient-table td,
+.recipient-table th{
+    white-space:nowrap;
+}
+
+/* Better cell spacing */
+.recipient-table td{
+    vertical-align:middle;
+}

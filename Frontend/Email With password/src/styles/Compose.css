@@ -1,0 +1,1430 @@
+/* ==========================================
+    COMPOSE (COMPACT)
+========================================== */
+
+.compose-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px; /* Reduced from 8px */
+}
+
+.compose-card-main {
+  border-radius: 12px; /* Reduced from 22px */
+}
+
+.compose-card-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.compose-card-main-title {
+  font-size: 1rem; /* Reduced from 1.2rem */
+  font-weight: 700;
+  color: var(--text);
+}
+
+.compose-card-main-subtitle {
+  margin-top: 2px; /* Reduced from 4px */
+  color: var(--text-light);
+  font-size: 0.8rem; /* Reduced from 0.9rem */
+}
+
+/* ==========================================
+    LABEL
+========================================== */
+
+.compose-label {
+  display: block;
+  margin-bottom: 4px; /* Reduced from 8px */
+  font-size: 0.8rem; /* Reduced from 0.9rem */
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ==========================================
+    INPUT
+========================================== */
+
+.compose-input {
+  width: 100%;
+  padding: 8px 12px; /* Reduced from 13px 16px */
+  border-radius: 8px; /* Reduced from 14px */
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: 0.25s;
+  font-size: 0.85rem; /* Reduced from 0.95rem */
+}
+
+.compose-input::placeholder {
+  color: var(--text-light);
+}
+
+.compose-input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12); /* Thinner focus ring */
+}
+
+/* ==========================================
+    ERROR
+========================================== */
+
+.compose-error {
+    margin-top: 4px; /* Reduced from 6px */
+    color: #ef4444;
+    font-size: 0.75rem; /* Reduced from 0.82rem */
+}
+
+/* ==========================================
+    MODE CARD
+========================================== */
+
+.compose-mode-card {
+    position: relative;
+    cursor: pointer;
+    padding: 16px; /* Reduced from 24px */
+    border-radius: 12px; /* Reduced from 20px */
+    background: var(--surface);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    transition: 0.3s;
+    box-shadow: 0 4px 15px var(--shadow); /* Softer, smaller shadow */
+}
+
+.compose-mode-card:hover {
+    transform: translateY(-2px); /* Subtle hover lift */
+    border-color: #38bdf8;
+}
+
+.compose-mode-active {
+    border-color: #0ea5e9;
+    box-shadow: 
+    0 0 0 3px rgba(56, 189, 248, 0.12),
+    0 8px 20px rgba(14, 165, 233, 0.15); /* Scaled down active shadow */
+}
+
+.compose-mode-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px; /* Reduced from 10px */
+}
+
+.compose-mode-top h3 {
+    font-size: 0.9rem; /* Reduced from 1rem */
+    font-weight: 700;
+    color: var(--text);
+}
+
+.compose-mode-card p {
+    color: var(--text-light);
+    font-size: 0.8rem; /* Reduced from 0.9rem */
+    line-height: 1.4; /* Tighter line height */
+}
+
+/* ==========================================
+    ACTIVE BADGE
+========================================== */
+
+.compose-badge {
+    padding: 3px 8px; /* Reduced from 5px 12px */
+    border-radius: 999px;
+    background: #dcfce7;
+    color: #16a34a;
+    font-size: 0.7rem; /* Reduced from 0.75rem */
+    font-weight: 700;
+}
+
+/* ==========================================
+    DARK
+========================================== */
+
+.dark .compose-input {
+    background: rgba(15, 23, 42, 0.65);
+}
+
+.dark .compose-mode-card {
+    background: rgba(15, 23, 42, 0.65);
+}
+
+
+/* ==========================================
+    EMAIL DETAILS BOX (COMPACT)
+========================================== */
+
+.email-details-card {
+  padding: 16px; /* Shrinks the outer padding (replaced p-7) */
+}
+
+.email-details-body {
+    margin-top: 14px; /* Tightens space below the header */
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Tightens vertical space between inputs */
+}
+
+.email-details-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px; /* Tightens horizontal space between inputs */
+}
+
+/* Side-by-side inputs on medium screens and up */
+@media (min-width: 768px) {
+    .email-details-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+/* ==========================================
+    EMAIL CONTENT (COMPACT)
+========================================== */
+
+.compose-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px; /* Reduced from 24px 28px */
+  border-bottom: 1px solid var(--border);
+}
+
+.compose-template-count {
+  padding: 4px 12px; /* Reduced from 7px 16px */
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #0284c7;
+  font-size: 0.75rem; /* Reduced from 0.82rem */
+  font-weight: 600;
+}
+
+.compose-empty {
+  padding: 40px 16px; /* Reduced from 60px 20px */
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.compose-template-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px; /* Reduced from 18px */
+  padding: 12px; /* Reduced from 18px */
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px var(--shadow); /* Softer shadow */
+}
+
+.compose-template-card:hover {
+  transform: translateY(-2px); /* Reduced from -4px */
+  border-color: #38bdf8;
+}
+
+.compose-template-card-active {
+  border: 2px solid #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12); /* Thinner focus ring */
+}
+
+.compose-template-preview {
+  height: 150px; /* Reduced from 210px */
+  overflow: hidden;
+  border-radius: 8px; /* Reduced from 14px */
+  position: relative;
+  border: 1px solid var(--border);
+}
+
+.compose-template-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+}
+
+.compose-template-overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.compose-template-name {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.compose-selected-template {
+  margin-top: 16px; /* Reduced from 24px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.compose-selected-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Reduced from 10px */
+  padding: 6px 14px; /* Reduced from 10px 18px */
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #15803d;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.compose-selected-dot {
+  width: 8px; /* Reduced from 10px */
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.compose-remove-btn {
+  width: 32px; /* Reduced from 38px */
+  height: 32px;
+  border: none;
+  border-radius: 8px; /* Reduced from 12px */
+  cursor: pointer;
+  background: #fee2e2;
+  color: #dc2626;
+  transition: 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compose-remove-btn:hover {
+  transform: scale(1.05);
+}
+
+.compose-editor-toolbar {
+  display: flex;
+  gap: 6px; /* Reduced from 10px */
+  padding: 12px 16px; /* Reduced from 16px 20px */
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(18px);
+}
+
+.compose-toolbar-btn {
+  width: 34px; /* Reduced from 42px */
+  height: 34px;
+  border: none;
+  border-radius: 8px; /* Reduced from 12px */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: 0.25s;
+  color: var(--text);
+}
+
+.compose-toolbar-btn:hover {
+  background: #e0f2fe;
+}
+
+.compose-toolbar-btn-active {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.compose-variable-box {
+  padding: 12px 16px; /* Reduced from 20px */
+  border-bottom: 1px solid var(--border);
+  background: rgba(56, 189, 248, 0.06);
+}
+
+.compose-variable-title {
+  margin-bottom: 8px; /* Reduced from 12px */
+  font-size: 0.8rem; /* Reduced from 0.85rem */
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.compose-variable-chip {
+  padding: 6px 12px; /* Reduced from 8px 16px */
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: white;
+  cursor: pointer;
+  transition: 0.25s;
+  font-size: 0.8rem;
+}
+
+.compose-variable-chip:hover {
+  background: #dbeafe;
+  border-color: #38bdf8;
+}
+
+.compose-editor {
+  min-height: 260px; /* Reduced from 360px */
+  padding: 16px; /* Reduced from 24px */
+}
+
+.compose-editor .ProseMirror {
+  min-height: 220px; /* Reduced from 320px */
+  outline: none;
+  color: var(--text);
+}
+
+/* ==================================
+    ATTACHMENTS CARD (COMPACT)
+================================== */
+
+.compose-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px; /* Reduced from 20px */
+  padding: 16px; /* Reduced from 28px */
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05); /* Softer shadow */
+}
+
+.compose-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px; /* Reduced from 28px */
+}
+
+.compose-card-title {
+  font-size: 16px; /* Reduced from 20px */
+  font-weight: 700;
+  color: #111827;
+}
+
+.compose-card-subtitle {
+  margin-top: 2px; /* Reduced from 4px */
+  font-size: 12px; /* Reduced from 13px */
+  color: #6b7280;
+}
+
+.attachment-count {
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px; /* Reduced from 13px */
+  font-weight: 600;
+  padding: 4px 12px; /* Reduced from 8px 14px */
+  border-radius: 999px;
+}
+
+.attachment-section-title {
+  font-size: 13px; /* Reduced from 14px */
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 10px; /* Reduced from 14px */
+}
+
+.attachment-chip-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Reduced from 12px */
+}
+
+.attachment-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Reduced from 10px */
+  padding: 8px 14px; /* Reduced from 12px 18px */
+  border-radius: 8px; /* Reduced from 14px */
+  border: 1px solid #d1d5db;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.25s;
+  font-size: 13px; /* Reduced from 14px */
+  font-weight: 500;
+}
+
+.attachment-chip:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.12);
+}
+
+.attachment-chip-active {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.attachment-check {
+  margin-left: 6px; /* Reduced from 8px */
+  font-weight: bold;
+}
+
+.upload-zone {
+  margin-top: 16px; /* Reduced from 24px */
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px; /* Reduced from 18px */
+  padding: 24px 16px; /* Reduced from 45px 25px */
+  text-align: center;
+  transition: 0.3s;
+  background: #f8fbff;
+  cursor: pointer;
+}
+
+.upload-zone:hover {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.upload-zone-active {
+  border-color: #2563eb;
+  background: #dbeafe;
+}
+
+.upload-icon {
+  width: 48px; /* Reduced from 72px */
+  height: 48px; /* Reduced from 72px */
+  margin: auto;
+  border-radius: 12px; /* Reduced from 18px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: #fff;
+  margin-bottom: 12px; /* Reduced from 18px */
+}
+
+.upload-icon svg {
+  width: 24px; /* Scaling down the inner icon */
+  height: 24px;
+}
+
+.upload-title {
+  font-size: 15px; /* Reduced from 18px */
+  font-weight: 700;
+  color: #111827;
+}
+
+.upload-description {
+  margin-top: 4px; /* Reduced from 8px */
+  font-size: 12px; /* Added to reduce size */
+  color: #6b7280;
+}
+
+.upload-link {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.upload-limit {
+  display: block;
+  margin-top: 8px; /* Reduced from 10px */
+  color: #9ca3af;
+  font-size: 11px; /* Reduced from 12px */
+}
+
+.uploaded-files {
+  margin-top: 20px; /* Reduced from 28px */
+}
+
+.uploaded-file-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px; /* Reduced from 16px */
+  border-radius: 12px; /* Reduced from 16px */
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  margin-top: 8px; /* Reduced from 12px */
+  transition: 0.25s;
+}
+
+.uploaded-file-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.uploaded-file-left {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Reduced from 16px */
+}
+
+.uploaded-file-icon {
+  width: 36px; /* Reduced from 48px */
+  height: 36px; /* Reduced from 48px */
+  border-radius: 8px; /* Reduced from 14px */
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploaded-file-icon svg {
+  width: 18px; /* Scaling down the inner icon */
+  height: 18px;
+}
+
+.uploaded-file-left h4 {
+  font-size: 14px; /* Reduced from 15px */
+  font-weight: 600;
+  color: #111827;
+}
+
+.uploaded-file-left p {
+  font-size: 12px; /* Reduced from 13px */
+  color: #6b7280;
+  margin-top: 2px; /* Reduced from 4px */
+}
+
+.remove-file-btn {
+  width: 32px; /* Reduced from 38px */
+  height: 32px; /* Reduced from 38px */
+  border: none;
+  border-radius: 8px; /* Reduced from 10px */
+  background: #fef2f2;
+  color: #dc2626;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+
+.remove-file-btn:hover {
+  background: #dc2626;
+  color: #fff;
+}
+
+.attachment-empty {
+  padding: 12px; /* Reduced from 20px */
+  text-align: center;
+  color: #9ca3af;
+  font-size: 13px; /* Ensure text matches compact size */
+  border: 1px dashed #d1d5db;
+  border-radius: 10px; /* Reduced from 14px */
+  background: #fafafa;
+}
+
+/* ===========================
+    CAMPAIGN CARD (COMPACT)
+=========================== */
+
+.campaign-card {
+  background: #fff;
+  border: 1px solid #e6edf7;
+  border-radius: 12px; /* Reduced from 22px */
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05); /* Softer shadow */
+}
+
+.compose-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px; /* Reduced from 24px */
+  border-bottom: 1px solid #eef2f7;
+}
+
+.compose-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px; /* Reduced from 5px 12px */
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 11px; /* Reduced from 12px */
+  font-weight: 700;
+  margin-bottom: 6px; /* Reduced from 10px */
+}
+
+.compose-title {
+  font-size: 16px; /* Reduced from 22px */
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2px; /* Reduced from 4px */
+}
+
+.compose-subtitle {
+  font-size: 12px; /* Reduced from 14px */
+  color: #6b7280;
+}
+
+/* Toggle (Scaled Down) */
+
+.campaign-toggle {
+  width: 44px; /* Reduced from 58px */
+  height: 24px; /* Reduced from 32px */
+  border: none;
+  border-radius: 999px;
+  background: #d1d5db;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+
+.campaign-toggle-thumb {
+  position: absolute;
+  width: 18px; /* Reduced from 24px */
+  height: 18px; /* Reduced from 24px */
+  border-radius: 50%;
+  background: #fff;
+  left: 3px; /* Reduced from 4px */
+  top: 3px; /* Reduced from 4px */
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.campaign-toggle-active {
+  background: #2563eb;
+}
+
+.campaign-toggle-active .campaign-toggle-thumb {
+  transform: translateX(20px); /* Adjusted for new width: 44 - 18 - 6 */
+}
+
+/* Status */
+
+.campaign-status {
+  display: flex;
+  gap: 10px; /* Reduced from 14px */
+  align-items: flex-start;
+  margin: 16px; /* Reduced from 24px */
+  padding: 12px; /* Reduced from 16px */
+  border-radius: 12px; /* Reduced from 16px */
+}
+
+.campaign-status-active {
+  background: #effaf3;
+  border: 1px solid #b7f0cb;
+}
+
+.campaign-status-disabled {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.campaign-status-dot {
+  width: 8px; /* Reduced from 12px */
+  height: 8px; /* Reduced from 12px */
+  border-radius: 50%;
+  background: #22c55e;
+  margin-top: 3px; /* Reduced from 4px */
+}
+
+.campaign-status-disabled .campaign-status-dot {
+  background: #9ca3af;
+}
+
+.campaign-status-title {
+  font-size: 13px; /* Reduced from 15px */
+  font-weight: 600;
+  color: #111827;
+}
+
+.campaign-status-text {
+  font-size: 12px; /* Reduced from 13px */
+  color: #6b7280;
+  margin-top: 2px; /* Reduced from 3px */
+}
+
+/* Body */
+
+.campaign-body {
+  padding: 0 16px 16px; /* Reduced from 0 24px 24px */
+}
+
+.compose-field {
+  margin-top: 16px; /* Reduced from 22px */
+}
+
+.compose-label {
+  display: block;
+  font-size: 12px; /* Reduced from 13px */
+  font-weight: 600;
+  margin-bottom: 4px; /* Reduced from 8px */
+  color: #374151;
+}
+
+.compose-input,
+.compose-textarea {
+  width: 100%;
+  border: 1px solid #d9e3f1;
+  border-radius: 8px; /* Reduced from 14px */
+  padding: 8px 12px; /* Reduced from 14px 16px */
+  font-size: 13px; /* Reduced from 14px */
+  transition: 0.25s;
+  background: #fff;
+}
+
+.compose-input:focus,
+.compose-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12); /* Thinner focus ring */
+}
+
+.compose-textarea {
+  resize: none;
+  min-height: 75px; /* Reduced from 110px */
+}
+
+.compose-helper {
+  display: block;
+  margin-top: 4px; /* Reduced from 8px */
+  color: #9ca3af;
+  font-size: 11px; /* Reduced from 12px */
+}
+
+.compose-error {
+  margin-top: 4px; /* Reduced from 8px */
+  color: #ef4444;
+  font-size: 11px; /* Reduced from 13px */
+}
+
+/* Tips */
+
+.campaign-tip-box {
+  margin-top: 16px; /* Reduced from 24px */
+  display: flex;
+  gap: 10px; /* Reduced from 14px */
+  padding: 12px; /* Reduced from 18px */
+  border-radius: 12px; /* Reduced from 16px */
+  background: linear-gradient(135deg, #eef6ff, #f8fbff);
+  border: 1px solid #dbeafe;
+}
+
+.campaign-tip-icon {
+  width: 32px; /* Reduced from 42px */
+  height: 32px; /* Reduced from 42px */
+  border-radius: 8px; /* Reduced from 12px */
+  background: #2563eb;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px; /* Reduced from 18px */
+  flex-shrink: 0;
+}
+
+.campaign-tip-box h4 {
+  margin: 0;
+  font-size: 13px; /* Reduced from 15px */
+  font-weight: 700;
+  color: #111827;
+}
+
+.campaign-tip-box p {
+  margin-top: 2px; /* Reduced from 5px */
+  font-size: 12px; /* Reduced from 13px */
+  color: #6b7280;
+  line-height: 1.5; /* Slightly tighter line height */
+}
+
+/*=========================
+  Recipient Card (COMPACT)
+=========================*/
+
+.recipient-card {
+  background: #fff;
+  border: 1px solid #e7edf7;
+  border-radius: 12px; /* Reduced from 22px */
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05); /* Softer shadow */
+}
+
+.recipient-options{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+
+    padding:20px;
+
+    border-bottom:1px solid #eef2f7;
+}
+
+.recipient-option{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+    width: 10vw;
+    position:relative;
+
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+
+    background:#ffffff;
+
+    cursor:pointer;
+
+    transition:
+        border-color .25s ease,
+        background .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.recipient-option:hover{
+
+    border-color:#3b82f6;
+
+    background:#f8fbff;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 8px 22px rgba(59,130,246,.10);
+}
+
+.recipient-option-active{
+
+    border-color:#2563eb;
+
+    background:#eff6ff;
+
+    box-shadow:
+        0 0 0 3px rgba(37,99,235,.10);
+}
+
+.recipient-icon{
+
+    width:48px;
+    height:48px;
+
+    padding:12px;
+
+    border-radius:14px;
+
+    flex-shrink:0;
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+    transition:.25s;
+}
+
+.recipient-option:hover .recipient-icon{
+
+    background:#bfdbfe;
+}
+
+.recipient-option-active .recipient-icon{
+
+    background:#2563eb;
+
+    color:#fff;
+}
+
+.recipient-option div{
+
+    display:flex;
+    flex-direction:column;
+
+    min-width:0;
+}
+
+.recipient-option h4{
+
+    margin:0;
+
+    font-size:.95rem;
+    font-weight:700;
+
+    color:#111827;
+}
+
+.recipient-option p{
+
+    margin-top:4px;
+
+    font-size:.82rem;
+    line-height:1.45;
+
+    color:#6b7280;
+}
+
+.recipient-option::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:14px;
+    right:14px;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:transparent;
+
+    transition:.25s;
+}
+
+.recipient-option-active::after{
+
+    background:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+}
+
+
+.recipient-body {
+  padding: 16px; /* Reduced from 24px */
+}
+
+.compose-select {
+  width: 100%;
+  height: 34px; /* Reduced from 40px */
+  padding: 5px 10px; /* Reduced from 5px 15px */
+  border: 1px solid #d9e3f1;
+  border-radius: 8px; /* Reduced from 14px */
+  font-size: 13px; /* Reduced from 14px */
+  background: #fff;
+  transition: 0.25s;
+}
+
+.compose-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12); /* Thinner focus ring */
+}
+
+.recipient-tip {
+  margin-top: 16px; /* Reduced from 22px */
+  display: flex;
+  gap: 8px; /* Reduced from 12px */
+  align-items: flex-start;
+  padding: 12px; /* Reduced from 16px */
+  border-radius: 10px; /* Reduced from 14px */
+  background: #f8fbff;
+  border: 1px solid #dbeafe;
+}
+
+.recipient-tip-dot {
+  width: 8px; /* Reduced from 12px */
+  height: 8px; /* Reduced from 12px */
+  border-radius: 50%;
+  background: #2563eb;
+  margin-top: 3px; /* Reduced from 4px */
+  flex-shrink: 0;
+}
+
+.recipient-tip p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px; /* Reduced from 13px */
+  line-height: 1.5; /* Slightly tighter line height */
+}
+
+@media (max-width: 768px) {
+  .recipient-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 490px) {
+  .recipient-option{
+    width: 150px;
+  }
+}
+
+/* ==========================================
+    DARK MODE OVERRIDES 
+========================================== */
+
+.dark .compose-card-main,
+.dark .compose-card,
+.dark .campaign-card,
+.dark .recipient-card {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+.dark .compose-card-main-title,
+.dark .compose-card-title,
+.dark .compose-card-subtitle,
+.dark .compose-title,
+.dark .upload-title,
+.dark .recipient-option h4,
+.dark .campaign-tip-box h4,
+.dark .campaign-status-title,
+.dark .uploaded-file-left h4 {
+  color: #f8fafc;
+}
+
+.dark .compose-label,
+.dark .attachment-section-title {
+  color: #e2e8f0;
+}
+
+.dark .compose-input,
+.dark .compose-textarea,
+.dark .compose-select {
+  background: rgba(15, 23, 42, 0.65);
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+.dark .compose-input::placeholder,
+.dark .compose-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.dark .compose-card-main-subtitle,
+.dark .compose-subtitle,
+.dark .upload-description,
+.dark .recipient-option p,
+.dark .campaign-status-text,
+.dark .campaign-tip-box p,
+.dark .recipient-tip p,
+.dark .uploaded-file-left p {
+  color: #94a3b8;
+}
+
+.dark .compose-mode-card {
+  background: rgba(15, 23, 42, 0.65);
+  border-color: #334155;
+}
+
+.dark .compose-mode-card h3 {
+  color: #f8fafc;
+}
+
+.dark .compose-template-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.dark .compose-template-name {
+  color: #f8fafc;
+}
+
+.dark .compose-editor-toolbar {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: #334155;
+}
+
+.dark .compose-toolbar-btn {
+  color: #cbd5e1;
+}
+
+.dark .compose-toolbar-btn:hover {
+  background: #334155;
+}
+
+.dark .compose-toolbar-btn-active {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.dark .compose-editor .ProseMirror {
+  color: #f8fafc;
+}
+
+.dark .attachment-chip {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+.dark .upload-zone {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+.dark .upload-zone:hover,
+.dark .upload-zone-active {
+  background: #1e293b;
+  border-color: #3b82f6;
+}
+
+.dark .uploaded-file-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.dark .campaign-status-disabled {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+.dark .campaign-tip-box,
+.dark .recipient-tip {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.dark .recipient-option {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.dark .recipient-option:hover {
+  border-color: #3b82f6;
+}
+
+.dark .recipient-option-active {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: #3b82f6;
+}
+
+.dark .dashboard-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.dark .attachment-empty {
+  background: #0f172a;
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+.dark .campaign-status-active {
+  background: rgba(34, 197, 94, 0.1); /* Subtle green tint for dark mode */
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+
+/* ==========================================
+    CAMPAIGN SETTINGS CARD
+========================================== */
+
+.campaign-settings-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.campaign-settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.campaign-settings-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.campaign-settings-subtitle {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin: 4px 0 0 0;
+}
+
+/* ==========================================
+    DARK MODE OVERRIDES
+========================================== */
+
+.dark .campaign-settings-card {
+  background-color: #1e293b;
+  border-color: #334155;
+}
+
+.dark .campaign-settings-title {
+  color: #ffffff;
+}
+
+.dark .campaign-settings-subtitle {
+  color: #94a3b8;
+}
+
+
+
+/* ==========================================
+    SCHEDULE BOX (COMPACT)
+========================================== */
+
+.schedule-box-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px; /* Reduced from 24px */
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05); /* Softer shadow */
+  border: 1px solid #e5e7eb;
+}
+
+.schedule-box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px; /* Reduced from 16px */
+}
+
+.schedule-box-title {
+  font-size: 15px; /* Reduced from 1.125rem */
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.schedule-toggle-btn {
+  font-size: 12px; /* Reduced from 0.875rem */
+  color: #2563eb;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.schedule-toggle-btn:hover {
+  color: #1d4ed8;
+}
+
+.schedule-inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Reduced from 16px */
+}
+
+.schedule-label {
+  display: block;
+  font-size: 12px; /* Reduced from 0.875rem */
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.schedule-input {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  padding: 6px 10px; /* Reduced from 8px 12px */
+  font-size: 13px; /* Reduced size */
+  background-color: #ffffff;
+  color: #111827;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.schedule-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+/* ==========================================
+    ACTION BUTTONS (COMPACT)
+========================================== */
+
+.action-buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Reduced from 12px (space-y-3) */
+}
+
+.action-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* Reduced from 8px */
+  padding: 10px 16px; /* Reduced from py-3 px-4 */
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 13px; /* Reduced from 14px */
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.action-icon {
+  width: 16px; /* Explicit compact icon sizing */
+  height: 16px;
+}
+
+.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-preview {
+  border: 1px solid #d1d5db;
+  color: #374151;
+  background: #ffffff;
+}
+
+.btn-preview:hover:not(.btn-disabled) {
+  background: #f9fafb;
+}
+
+.btn-test {
+  border: 1px solid #93c5fd;
+  color: #1d4ed8;
+  background: #ffffff;
+}
+
+.btn-test:hover:not(.btn-disabled) {
+  background: #eff6ff;
+}
+
+.btn-submit {
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn-submit:hover:not(.btn-submit-disabled) {
+  background: #1d4ed8;
+}
+
+.btn-submit-disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  color: #f3f4f6;
+}
+
+/* ==========================================
+    DARK MODE OVERRIDES
+========================================== */
+
+.dark .schedule-box-card {
+  background-color: #1e293b;
+  border-color: #334155;
+}
+
+.dark .schedule-box-title {
+  color: #ffffff;
+}
+
+.dark .schedule-label {
+  color: #d1d5db;
+}
+
+.dark .schedule-input {
+  background-color: #0f172a;
+  border-color: #475569;
+  color: #ffffff;
+}
+
+.dark .schedule-input:focus {
+  border-color: #3b82f6;
+}
+
+.dark .btn-preview {
+  border-color: #475569;
+  color: #d1d5db;
+  background: transparent;
+}
+
+.dark .btn-preview:hover:not(.btn-disabled) {
+  background: #334155;
+}
+
+.dark .btn-test {
+  border-color: #3b82f6;
+  color: #93c5fd;
+  background: transparent;
+}
+
+.dark .btn-test:hover:not(.btn-disabled) {
+  background: #1e293b;
+}
